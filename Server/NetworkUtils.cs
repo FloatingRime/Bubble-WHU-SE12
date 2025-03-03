@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 
 //网络工具类
+//将客户端的信息序列化，传输给服务器，服务器反序列化
 
 public static class NetworkUtils
 {
@@ -48,11 +49,13 @@ public static class NetworkUtils
     public static string GetLocalIPv4()
     {
         string hostName = Dns.GetHostName(); //获取主机名
+        //IPHostEntry类存储与主机关联的 IP 地址和别名信息
         IPHostEntry iPEntry = Dns.GetHostEntry(hostName); //解析主机IP信息
 
         for (int i = 0; i < iPEntry.AddressList.Length; i++)
         {
             //从IP地址列表中筛选出IPv4类型的IP地址
+            //AddressFamily：返回地址类型(IPv4 or IPv6)
             if (iPEntry.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
             {
                 return iPEntry.AddressList[i].ToString();
