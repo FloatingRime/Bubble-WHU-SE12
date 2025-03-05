@@ -10,10 +10,16 @@ public class Player
 
     public int Hp;    //玩家血量
 
+    public Player(Socket socket, int id)
+    {
+        playerSocket = socket;
+        playerId = id;
+    }
+
     public void Offline()
     {
-        Console.WriteLine($"玩家 {Id} 掉线");
-        Socket.Close();
-        Server.RemovePlayer(Id);  // 从服务器移除
+        Console.WriteLine($"玩家 {playerId} 掉线");
+        playerSocket.Close();
+        //Server.RemovePlayer(Id);  // 从服务器移除
     }
 }
