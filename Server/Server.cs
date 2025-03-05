@@ -61,10 +61,11 @@ public static class Server
 
         while(true)
         {
-            byte[] header = new byte[4]; //存储报文头部
-            int length = 0; //消息长度
+            byte[] header = new byte[8]; //存储报文头部
+            int length = 4096; //消息长度
             MessageType type = MessageType.None; //消息类型
             int receive = 0; //实际接收的信息长度
+            long timeStamp = 0;
 
             //接收数据包头
             try
@@ -92,8 +93,11 @@ public static class Server
                 BinaryReader binary = new BinaryReader(stream, Encoding.UTF8);
                 try
                 {
-                    length = binary.ReadUInt16();//从数据流中读取前2字节作为消息长度（length）
-                    type = (MessageType)binary.ReadUInt16();
+                    //length = binary.ReadUInt16();//从数据流中读取前2字节作为消息长度（length）
+                    //type = (MessageType)binary.ReadUInt16();
+                    //type = (MessageType)binary.ReadInt32();
+                    timeStamp = (long)BitConverter.ToInt32(header, 0);
+                    type = (MessageType)BitConverter.ToInt32(header, 4);
                 }
                 catch(Exception)
                 {
@@ -104,16 +108,16 @@ public static class Server
             }
 
             //接收消息
-            if(length - 4 > 0) //如果有消息
+            if(length - 8 > 0) //如果有消息
             {
-                byte[] data = new byte[length - 4];
+                byte[] data = new byte[length];
                 receive = client.Receive(data);
-                if(receive < data.Length)
+                /*if(receive < data.Length)
                 {
                     Console.WriteLine($"来自玩家{player.playerId}的消息内容不完整");
                     player.Offline();
                     return;
-                }
+                }*/
                 Console.WriteLine($"接受到消息");
                 HandleMessage(player,type,data);
             }
@@ -176,7 +180,7 @@ public static class Server
 
 
 
-    //数据封装，返回打包后的信息
+    //数据封装，返回打包后的信息，需要做出修改
     //举个例子，加入信息是"Hello"，那么长度为九字节，类型和长度各占2字节，内容占5字节
     private static byte[] Pack(MessageType type, byte[] data = null)
     {
