@@ -2,13 +2,14 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
 
 //网络工具类
 //将客户端的信息序列化，传输给服务器，服务器反序列化
 
 public static class NetworkUtils
 {
-    //序列化，将object转化为字节数组
+    /*//序列化，将object转化为字节数组
     public static byte[] Serialize(object obj)
     {
         //检测输入有效性
@@ -42,6 +43,42 @@ public static class NetworkUtils
         {
             object obj = formatter.Deserialize(stream);
             return obj as T;
+        }
+    }*/
+
+    // 序列化
+    public static byte[] Serialize(object obj)
+    {
+        try
+        {
+            if (obj == null || !obj.GetType().IsSerializable)
+            {
+                return null;
+            }
+            return JsonSerializer.SerializeToUtf8Bytes(obj);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"序列化失败: {ex.Message}");
+            return null;
+        }
+    }
+
+    // 反序列化
+    public static T Deserialize<T>(byte[] data) where T : class
+    {
+        try
+        {
+            if (data == null || !typeof(T).IsSerializable)
+            {
+                return null;
+            }
+            return JsonSerializer.Deserialize<T>(data);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"反序列化失败: {ex.Message}");
+            return null;
         }
     }
 
