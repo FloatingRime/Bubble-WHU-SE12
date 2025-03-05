@@ -51,10 +51,10 @@ public static class NetworkUtils
     {
         try
         {
-            if (obj == null || !obj.GetType().IsSerializable)
+            /*if (obj == null || !obj.GetType().IsSerializable)
             {
                 return null;
-            }
+            }*/
             return JsonSerializer.SerializeToUtf8Bytes(obj);
         }
         catch (Exception ex)
@@ -69,10 +69,10 @@ public static class NetworkUtils
     {
         try
         {
-            if (data == null || !typeof(T).IsSerializable)
+            /*if (data == null || !typeof(T).IsSerializable)
             {
                 return null;
-            }
+            }*/
             return JsonSerializer.Deserialize<T>(data);
         }
         catch (Exception ex)
