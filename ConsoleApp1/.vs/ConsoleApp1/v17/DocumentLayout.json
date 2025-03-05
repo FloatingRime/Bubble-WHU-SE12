@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\",
+  "WorkspaceRootPath": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\consoleapp1\\server\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\bubble\\bubble-whu-se12\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\bubble\\bubble-whu-se12\\consoleapp1\\server\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|solutionrelative:server\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\consoleapp1\\server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\bubble\\bubble-whu-se12\\consoleapp1\\server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|solutionrelative:server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\consoleapp1\\server\\networkutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\bubble\\bubble-whu-se12\\consoleapp1\\server\\networkutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|solutionrelative:server\\networkutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\consoleapp1\\server\\messagepacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\bubble\\bubble-whu-se12\\consoleapp1\\server\\messagepacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|solutionrelative:server\\messagepacker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|c:\\users\\hyy\\desktop\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C3CED46-99D7-4EC6-8107-540E652AC95E}|ConsoleApp1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,15 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\Player.cs",
+              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\Player.cs",
               "RelativeDocumentMoniker": "Server\\Player.cs",
-              "ToolTip": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\Player.cs",
+              "ToolTip": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\Player.cs",
               "RelativeToolTip": "Server\\Player.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -47,52 +47,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MessagePacker.cs",
-              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\MessagePacker.cs",
+              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\MessagePacker.cs",
               "RelativeDocumentMoniker": "Server\\MessagePacker.cs",
-              "ToolTip": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\MessagePacker.cs",
+              "ToolTip": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\MessagePacker.cs",
               "RelativeToolTip": "Server\\MessagePacker.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T16:34:50.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T16:34:50.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NetworkUtils.cs",
+              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\NetworkUtils.cs",
+              "RelativeDocumentMoniker": "Server\\NetworkUtils.cs",
+              "ToolTip": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\NetworkUtils.cs",
+              "RelativeToolTip": "Server\\NetworkUtils.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAYwGgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T09:45:32.721Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "NetworkUtils.cs",
-              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\NetworkUtils.cs",
-              "RelativeDocumentMoniker": "Server\\NetworkUtils.cs",
-              "ToolTip": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\NetworkUtils.cs",
-              "RelativeToolTip": "Server\\NetworkUtils.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAYwGgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T09:45:32.721Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Server.cs",
-              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\Server.cs",
+              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\Server.cs",
               "RelativeDocumentMoniker": "Server\\Server.cs",
-              "ToolTip": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Server\\Server.cs",
+              "ToolTip": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Server\\Server.cs",
               "RelativeToolTip": "Server\\Server.cs",
               "ViewState": "AQIAAK0AAAAAAAAAAAAYwL4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T09:40:47.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T09:40:47.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\hyy\\Desktop\\ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\hyy\\Desktop\\Bubble\\Bubble-WHU-SE12\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T09:40:06.983Z",
               "EditorCaption": ""
