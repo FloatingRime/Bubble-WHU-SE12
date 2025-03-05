@@ -6,6 +6,7 @@ namespace Multiplay
     public enum MessageType
     {
         None, //空类型
+        HeartBeat, //心跳包验证
         Move, //移动
         HpChange, //血量改变
         Boom, //炸弹放置
