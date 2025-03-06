@@ -4,15 +4,24 @@ using System.Net.Sockets;
 using System.Text;
 using UnityEngine;
 
+public enum MessageType
+{
+    None, //空类型
+    HeartBeat, //心跳包验证
+    Move, //移动
+    HpChange, //血量改变
+    Boom, //炸弹放置
+}
+
 public class NetWork : MonoBehaviour
 {
     private Socket socket;
     private byte[] buffer = new byte[4096]; // 4KB 缓冲区
 
-    void Start()
+    public void StartNetWork(string s,int port)
     {
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        socket.Connect("127.0.0.1", 6666);
+        socket.Connect(s, port);
         StartReceive();
     }
 
@@ -43,15 +52,24 @@ public class NetWork : MonoBehaviour
 
     public void Send<T>(T data)
     {
+        if (socket == null) { print("还未连接服务器"); return; }
         try
         {
             // 序列化对象
             byte[] serializedData = SerializeData(data);
 
+            // 确保 MessageType 枚举中有对应的类型
+            if (!Enum.IsDefined(typeof(MessageType), typeof(T).Name))
+            {
+                Debug.LogError($"[发送失败] 未知的消息类型: {typeof(T).Name}");
+                return;
+            }
+
             // 创建网络消息
+            MessageType messageType = (MessageType)Enum.Parse(typeof(MessageType), typeof(T).Name);
             NetworkMessage message = new NetworkMessage
             {
-                ClassName = typeof(T).Name,
+                ClassName = (long)messageType,  // 这里修正转换问题
                 Timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds(),
                 Data = serializedData
             };
@@ -106,7 +124,7 @@ public class NetWork : MonoBehaviour
                 NetworkMessage message = new NetworkMessage
                 {
                     Timestamp = reader.ReadInt64(),
-                    ClassName = reader.ReadString(),
+                    ClassName = reader.ReadInt64(),
                     Data = reader.ReadBytes(reader.ReadInt32())
                 };
                 return message;
@@ -119,6 +137,6 @@ public class NetWork : MonoBehaviour
 public class NetworkMessage
 {
     public long Timestamp { get; set; }    // 时间戳（毫秒）
-    public string ClassName { get; set; }  // 类名
+    public long ClassName { get; set; }  // 类名lao1
     public byte[] Data { get; set; }       // 二进制数据
 }

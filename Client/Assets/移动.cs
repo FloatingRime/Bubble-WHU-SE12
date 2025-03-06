@@ -30,11 +30,11 @@ public class 移动 : MonoBehaviour
     {
         if(Input.GetKey(LeftKey))
         {
-            transform.position += new Vector3(speed * -1,0,0);
+            transform.position += new Vector3(speed * -1*Time.deltaTime,0,0);
         }
         if (Input.GetKey(RightKey))
         {
-            transform.position += new Vector3(speed,0,0);
+            transform.position += new Vector3(speed*Time.deltaTime,0,0);
         }
         network.Send<Move>(new Move(transform.position.x,transform.position.y));
     }
