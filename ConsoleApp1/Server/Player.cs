@@ -20,6 +20,6 @@ public class Player
     {
         Console.WriteLine($"玩家 {playerId} 掉线");
         playerSocket.Close();
-        //Server.RemovePlayer(Id);  // 从服务器移除
+        Server.RemovePlayer(this);  // 从服务器移除
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace Multiplay
 {
@@ -15,20 +16,40 @@ namespace Multiplay
     [Serializable]
     public class Move
     {
-        public float x;
-        public float y;
+        public float x { get; set; }
+        public float y { get; set; }
+
+        public Move() { }
+        public Move(float xx, float yy)
+        {
+            x = xx;
+            y = yy;
+        }
     }
 
     [Serializable]
     public class HpChange
     {
-        int hp;
+        int hp {  get; set; }
+        public HpChange() { }
+
+        public HpChange(int hp)
+        {
+            this.hp = hp;
+        }
     }
 
     [Serializable]
     public class Boom
     {
-        float x;
-        float y;
+        float x {  get; set; }
+        float y {  get; set; }
+
+        public Boom() { }
+        public Boom(float x, float y)
+        {
+            this.x = x;
+            this.y = y;
+        }
     }
 }
