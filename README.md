@@ -23,4 +23,19 @@
 
 #### 服务端启动方法：
 
-在ConsoleApp1文件夹里，点击sln文件，更改program.cs文件，ip地址通过ipconfig获取，再点击运行即可。
+见ConsoleApp1的README.txt
+
+
+
+#### 客户端启动方法：
+
+项目直接导入到unity启动即可
+
+
+
+#### 注意！！！
+
+1. 务必保证服务端和客户端的Message.cs文件夹一致
+2. 服务端转发消息会直接把消息原封不动转发，如果有想写的新消息类型，直接加到Message.cs里即可，不需要改写服务端逻辑。客户端id在SimpleClient类里，连接的时候会自动分配，写新消息类型的时候记得带上id
+3. 客户端消息打包见SimpleClient类里的SendMessage和PackAndSend，仿照MoveAction消息逻辑即可。
+4. 如果不直接导入项目，而是采取代码的话，记得下载nuget
